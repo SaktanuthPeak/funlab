@@ -46,13 +46,14 @@ class User(me.Document, UserMixin):
            return True
        return False
 
-
    def get_fullname(self):
-       return f"{self.first_name} {self.last_name}"
+        return f"{self.username} {self.username}"
 
-
+    
    def has_roles(self, *roles):
        for role in roles:
            if role in self.roles:
                return True
        return
+   
+   
